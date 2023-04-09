@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Ini icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Ini CSS buatan sendiri -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Bookstar</title>
+  </head>
+  <body>
+    <!-- Bagian awal navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fix">
+        <div class="container bg-dark">
+          <a class="bi bi-bookmark-star navbar-brand" href="#"> BOOKSTAR</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <form action="" class="d-flex align-items-center">
+                <input type="text" placeholder=" search here" aria-label="Search">
+                <button type="submit"><i class="bi bi-search search-button"></i></button>
+              </form>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#library">Library</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">|</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#login" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-fill"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#keranjang" type="button" data-bs-toggle="offcanvas" aria-controls="offcanvasRight"><i class="bi bi-cart4"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- Bagian akhir navbar -->
+
+    <!-- Bagian awal login pada navbar-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header color-bg2">
+            <h5 class="modal-title bi bi-person-fill" id="exampleModalLabel"> LOGIN</h5>
+          </div>
+          <div class="modal-body color-bg">
+            <form class="row g-3">
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Email</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Password</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="">
+              </div>
+              <div class="col-auto">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                <label class="form-check-label" for="autoSizingCheck">
+                  Remember me
+                </label>
+              </div>
+              </div>
+          </div>
+          <div class="modal-footer color-bg">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn color-bg2">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bagian akhir login pada navbar -->
+
+    <!-- Bagian awal my cart pada navbar -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="keranjang" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header color-bg2">
+        <h5 id="keranjang" class="bi bi-cart4"> MY CART</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body color-bg">
+        <div class="row" style="padding-top: 10px;">
+        <div class="d-flex align-items-center">
+          <div class="flex-shrink-0">
+            <img src="asset/Dikta dan Hukum.jpg" alt="..." style="height: 8rem;">
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <div class="col-md-12">
+              <h6><strong>Dikta & Hukum</strong></h6>
+            </div>
+            <div class="col-md-3">
+              <div class="d-flex align-items-center">
+              <i class="bi bi-dash-square-fill"></i><input type="text" class="form-control" placeholder="2"><i class="bi bi-plus-square-fill"></i>
+              </div>
+            </div>
+            <div class="col-md-8" style="padding-top: 10px;">
+              <select id="inputState" class="form-select">
+                <option selected>Choose ver...</option>
+                <option>E-Book ver</option>
+                <option>Book ver</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 40px;">
+        <div class="d-flex align-items-center">
+          <div class="flex-shrink-0">
+            <img src="asset/Statistika Terapan.jpg" alt="..." style="height: 8rem;">
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <div class="col-md-12">
+              <h6><strong>Statistika Terapan</strong></h6>
+            </div>
+            <div class="col-md-3">
+              <div class="d-flex align-items-center">
+              <i class="bi bi-dash-square-fill"></i><input type="text" class="form-control" placeholder="8"><i class="bi bi-plus-square-fill"></i>
+              </div>
+            </div>
+            <div class="col-md-8" style="padding-top: 10px;">
+              <select id="inputState" class="form-select">
+                <option selected>Choose ver...</option>
+                <option>E-Book ver</option>
+                <option>Book ver</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 40px;">
+          <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+              <img src="asset/e-x-to-the-o.jpg" alt="..." style="height: 8rem;">
+            </div>
+            <div class="flex-grow-1 ms-3">
+              <div class="col-md-12">
+                <h6><strong>E-X To The-O</strong></h6>
+              </div>
+              <div class="col-md-3">
+                <div class="d-flex align-items-center">
+                <i class="bi bi-dash-square-fill"></i><input type="text" class="form-control" placeholder="3"><i class="bi bi-plus-square-fill"></i>
+                </div>
+              </div>
+              <div class="col-md-8" style="padding-top: 10px;">
+                <select id="inputState" class="form-select">
+                  <option selected>Choose ver...</option>
+                  <option>E-Book ver</option>
+                  <option>Book ver</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+          <div class="modal-footer color-bg">
+            <button type="submit" class="btn color-bg2">Borrow The Book</button>
+            <button type="submit" class="btn color-bg2">Buy Now</button>
+          </div>
+      </div>
+    </div>
+    <!-- Bagian akhir my cart pada navbar -->
+
+    <!-- Bagian awal home section -->
+    <section>
+        <div class="container-fluid text-center color-bg padding-sec1" style="padding-top: 50px;" id="home">
+        <!-- Content here -->
+        <i class="bi bi-bookmark-star" style="font-size: 10rem; color: gray;"></i>
+        <h1>BOOKSTAR</h1>
+        <h4>An Online Book Store</h4>
+        </div>
+    </section>
+    <!-- Bagian akhir home section -->
+
+    <!-- Bagian awal about section -->
+    <section>
+        <div class="container-fluid padding-sec2 bg-sec2" id="about">   
+        <!-- Content here -->
+        <div class="container">
+            <span class="d-block w-25 p-2 color-bg2 text-dark font-me3">
+                <h2>Tentang BOOKSTAR</h2>
+            </span>
+            <span class="d-block p-5 color-bg text-dark font-me2 lh-lg">
+                <p>
+                BOOKSTAR adalah sebuah toko buku online yang menyediakan berbagai macam buku mulai dari fiksi, non-fiksi, hingga buku-buku edukatif. Toko buku online ini menawarkan kemudahan bagi para pelanggannya 
+                untuk melakukan beberapa hal seperti membaca buku secara online, melakukan peminjaman buku fisik, melakukan pre-order terhadap buku yang akan dirilis, dan dapat melakukan pembelian buku. Para pelanggan 
+                BOOKSTAR dapat dengan mudah menemukan buku yang diinginkan dengan menggunakan fitur pencarian yang tersedia di halaman utama. Selain itu, para pelanggan juga dapat dengan mudah mengetahui buku-buku  
+                yang disediakan dengan menggunakan fitur 'library' yang tersedia di situs ini. BOOKSTAR juga menyediakan fitur membaca buku secara online yang memungkinkan pelanggan untuk membaca buku tanpa harus membelinya 
+                terlebih dahulu. Pelanggan dapat mengakses buku-buku ini dari mana saja dan kapan saja dengan koneksi internet yang stabil. Namun, sayangnya tidak semua buku dapat diakses secara gratis, melainkan harus 
+                melakukan pembayaran dengan metode pembayaran yang telah disediakan. Selain membaca buku secara online, pelanggan juga dapat melakukan peminjaman buku dengan selang waktu peminjaman yang telah ditentukan. 
+                Pelanggan dapat memilih buku yang ingin dipinjam dan mengatur jangka waktu peminjaman sesuai keinginan. BOOKSTAR akan mengirimkan buku tersebut ke alamat yang telah ditentukan dan pelanggan dapat mengembalikan 
+                buku tersebut setelah masa peminjaman berakhir. Tidak hanya itu, BOOKSTAR juga menawarkan kemudahan bagi pelanggan untuk membeli buku secara langsung. Pelanggan dapat memilih buku yang diinginkan dan melakukan 
+                pembayaran dengan metode pembayaran yang telah disediakan. BOOKSTAR akan mengirimkan buku yang telah dibeli ke alamat yang telah ditentukan oleh pelanggan. Dengan berbagai macam fitur yang ditawarkan, BOOKSTAR
+                memberikan pengalaman belanja buku online yang mudah dan menyenangkan bagi para pelanggannya. Selain itu, toko buku online ini juga memastikan bahwa pelanggan mendapatkan layanan yang berkualitas dengan 
+                menyediakan buku-buku terbaik dari berbagai genre dan dengan harga yang terjangkau.
+                </p>
+            </span>
+        </div>
+        </div>
+    </section>
+    <!-- Bagian akhir about section -->
+
+    <!-- Bagian awal library section -->
+    <section>
+        <div class="container-fluid padding-sec3 color-bg" id="library">
+            <!-- Content here -->
+            <div class="row padding-sec3-2">
+                <div class="col">
+                  <div class="container">
+                  <span class="d-block w-30 p-1 color-bg2 text-dark font-me4">
+                    <h2>P  E  R  P  U  S  T  A  K  A  A  N</h2>
+                  </span>
+                </div>
+            </div>
+            <div class="row padding-sec3-2">
+                <div class="col d-flex justify-content-center">
+                  <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#list-item-1">Buku Fiksi</button>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#list-item-2">Buku Non-Fiksi</button>
+                  </div>
+                  <div class="modal fade" id="list-item-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Buku Fiksi</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Buku fiksi adalah jenis buku yang berisi cerita atau kisah yang dibuat berdasarkan imajinasi penulisnya. Buku fiksi biasanya berisi cerita yang menghibur atau menyentuh 
+                          perasaan pembaca, seperti cerita fantasi, romantis, misteri, petualangan, dan sebagainya. Buku fiksi sering kali digunakan untuk mengisi waktu luang dan membantu pembaca 
+                          melupakan kegiatan sehari-hari. Beberapa jenis buku yang termasuk jenis buku fiksi yakni cerpen, novel, komik, dongeng, cergam, cernak, dan lain-lain.
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="modal fade" id="list-item-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Buku Non-Fiksi</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            Buku non-fiksi adalah jenis buku yang berisi informasi faktual dan nyata tentang suatu topik atau subyek tertentu. Buku non-fiksi sering kali dijadikan sebagai referensi atau 
+                            sumber informasi bagi pembaca yang ingin menambah pengetahuan atau belajar tentang suatu topik tertentu. Beberapa contoh buku non-fiksi antara lain buku sejarah, buku biografi, 
+                            buku pelajaran sekolah, buku kuliah, buku motivasi, buku ajar, buku referensi, ensiklopedia, kamus, dan lain-lain.
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                </div> 
+            </div>
+            <div class="container-fluid">
+            <div class="d-flex justify-content-center">
+              <div class="row padding-sec3-2">
+                <div class="col">
+                  <div class="card" style="width: 15rem;">
+                    <img src="asset/sagaras.jpeg" class="card-img-top" alt="..." style="height: 20rem;">
+                    <div class="card-body">
+                      <div class="card-text text-center">
+                        <h4>Sagaras</h4>
+                        <h5 class="text-muted">Tere Liye</h5>
+                        <p class="align-text-bottom font-rp">
+                          e-book ver : Rp40.000 <br>
+                          book ver : Rp80.500
+                        </p>
+                        <button class="btn btn-secondary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: 15rem;">
+                    <img src="asset/Koala Kumal.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                    <div class="card-body">
+                      <div class="card-text text-center">
+                        <h4>Koala Kumal</h4>
+                        <h5 class="text-muted">Raditya Dika</h5>
+                        <p class="align-text-bottom font-rp">
+                          e-book ver : Free <br>
+                          book ver : Rp52.000
+                        </p>
+                        <button class="btn btn-secondary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: 15rem;">
+                    <img src="asset/Dikta dan Hukum.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                    <div class="card-body">
+                      <div class="card-text text-center">
+                        <h4>Dikta & Hukum</h4>
+                        <h5 class="text-muted">Dhia`an Farah</h5>
+                        <p class="align-text-bottom font-rp">
+                          e-book ver : Rp37.200 <br>
+                          book ver : Rp74.600
+                        </p>
+                        <button class="btn btn-secondary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: 15rem;">
+                    <img src="asset/Jerapah.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                    <div class="card-body">
+                      <div class="card-text text-center">
+                        <h4>Jerapah</h4>
+                        <h5 class="text-muted">Nabila Anwar</h5>
+                        <p class="align-text-bottom font-rp">
+                          e-book ver : Free <br>
+                          book ver : Rp23.800
+                        </p>
+                        <button class="btn btn-secondary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: 15rem;">
+                    <img src="asset/Detektif Conan.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                    <div class="card-body">
+                      <div class="card-text text-center">
+                        <h4>Detektif Conan 101</h4>
+                        <h5 class="text-muted">Aoyama Gosho</h5>
+                        <p class="align-text-bottom font-rp">
+                          e-book ver : Rp15.000 <br>
+                          book ver : Rp37.500
+                        </p>
+                        <button class="btn btn-secondary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="row padding-sec3-2">
+                  <div class="col">
+                    <div class="card" style="width: 15rem;">
+                      <img src="asset/Ini Buku Dandees.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                      <div class="card-body">
+                        <div class="card-text text-center">
+                          <h4>Ini Buku Dandees</h4>
+                          <h5 class="text-muted">Danang Dan Darto</h5>
+                          <p class="align-text-bottom font-rp">
+                            e-book ver : Free <br>
+                            book ver : Rp27.300
+                          </p>
+                          <button class="btn btn-secondary">Add to cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 15rem;">
+                      <img src="asset/Pengabdi Netijen.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                      <div class="card-body">
+                        <div class="card-text text-center">
+                          <h4>Pengabdi Netijen</h4>
+                          <h5 class="text-muted">Geraldy Tan</h5>
+                          <p class="align-text-bottom font-rp">
+                            e-book ver : Free <br>
+                            book ver : Rp33.000
+                          </p>
+                          <button class="btn btn-secondary">Add to cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 15rem;">
+                      <img src="asset/Triple V.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                      <div class="card-body">
+                        <div class="card-text text-center">
+                          <h4>KKPK Triple V</h4>
+                          <h5 class="text-muted">Luthfiannisa Rusdarto</h5>
+                          <p class="align-text-bottom font-rp">
+                            e-book ver : Rp37.200 <br>
+                            book ver : Rp74.600
+                          </p>
+                          <button class="btn btn-secondary">Add to cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 15rem;">
+                      <img src="asset/The Lucky Ones.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                      <div class="card-body">
+                        <div class="card-text text-center">
+                          <h4>The Lucky Ones</h4>
+                          <h5 class="text-muted">Tiffany Reisz</h5>
+                          <p class="align-text-bottom font-rp">
+                            e-book ver : Rp56.000 <br>
+                            book ver : Rp93.750
+                          </p>
+                          <button class="btn btn-secondary">Add to cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 15rem;">
+                      <img src="asset/e-x-to-the-o.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                      <div class="card-body">
+                        <div class="card-text text-center">
+                          <h4>E-X To The-O</h4>
+                          <h5 class="text-muted">Anna Ervita Dewi</h5>
+                          <p class="align-text-bottom font-rp">
+                            e-book ver : Free <br>
+                            book ver : Rp31.000
+                          </p>
+                          <button class="btn btn-secondary">Add to cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="row padding-sec3-2 padding-sec1">
+                  <div class="col">
+                    <div class="card" style="width: 15rem;">
+                      <img src="asset/positive parenting.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                      <div class="card-body">
+                        <div class="card-text text-center">
+                          <h4>Positive Parenting</h4>
+                          <h5 class="text-muted">Rebecca Eanes</h5>
+                          <p class="align-text-bottom font-rp">
+                            e-book ver : 35.900 <br>
+                            book ver : Rp71.600
+                          </p>
+                          <button class="btn btn-secondary">Add to cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 15rem;">
+                      <img src="asset/Tuah_Bumi_Mataram.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                      <div class="card-body">
+                        <div class="card-text text-center">
+                          <h4>Tuah Bumi Mataram</h4>
+                          <h5 class="text-muted">Peri Mardiyono</h5>
+                          <p class="align-text-bottom font-rp">
+                            e-book ver : Rp18.200 <br>
+                            book ver : Rp62.900
+                          </p>
+                          <button class="btn btn-secondary">Add to cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 15rem;">
+                      <img src="asset/easy cook for mom.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                      <div class="card-body">
+                        <div class="card-text text-center">
+                          <h4>Easy Cook For Mom</h4>
+                          <h5 class="text-muted">Yunita Anwar</h5>
+                          <p class="align-text-bottom font-rp">
+                            e-book ver : Rp63.700 <br>
+                            book ver : Rp123.250
+                          </p>
+                          <button class="btn btn-secondary">Add to cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 15rem;">
+                      <img src="asset/Statistika Terapan.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                      <div class="card-body">
+                        <div class="card-text text-center">
+                          <h4>Statistika Terapan</h4>
+                          <h5 class="text-muted">Widarto Rachbini</h5>
+                          <p class="align-text-bottom font-rp">
+                            e-book ver : Rp43.000 <br>
+                            book ver : Rp65.500
+                          </p>
+                          <button class="btn btn-secondary">Add to cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 15rem;">
+                      <img src="asset/Mahir Bahasa Inggris.jpg" class="card-img-top" alt="..." style="height: 20rem;">
+                      <div class="card-body">
+                        <div class="card-text text-center">
+                          <h4>Mahir Bahasa Inggris</h4>
+                          <h5 class="text-muted">Chandra Dewi S.A</h5>
+                          <p class="align-text-bottom font-rp">
+                            e-book ver : Rp31.400 <br>
+                            book ver : Rp50.000
+                          </p>
+                          <button class="btn btn-secondary">Add to cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+              <div class="container">
+                <div class="row padding-sec1">
+                <div class="col d-md-flex justify-content-md-end">
+                  <button type="button" class="btn btn-link me-md-2" data-bs-toggle="modal" data-bs-target="#selengkapnya" style="color: gray;"><h6>Selengkapnya...</h6></button>
+                  <div class="modal fade" id="selengkapnya" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Mohon Maaf 😢</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              Sayang sekali... 💔 <br> Saat ini sedang dilakukan perbaikan website secara berkala, akan tetapi para pembaca dan pelanggan setia Bookstar masih dapat membaca buku yang telah kami 
+                              sediakan selama perbaikan website ini berlangsung. <br> <br> Silahkan kembali di lain waktu 👋
+                          </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <!-- Bagian awal rekomendasi untukmu pada library section -->
+            <div class="container">
+            <div class="row">
+              <div class="col padding-sec1 d-block w-25 p-2 color-bg2 text-dark font-me3">
+                <h3><u>Rekomendasi Untukmu</u></h3>
+              </div>
+            </div>
+            </div>
+            <div class="row" style="padding-bottom: 50px;">
+              <div class="col">
+                <div class="container color-bg2 padding-re" style="border-bottom-left-radius: 1cm; border-bottom-right-radius: 1cm;">
+                <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active d-flex justify-content-evenly" style="height: 13.5rem;">
+                      <img src="asset/Cerdas Berbicara.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/Cinta Brontosaurus.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/spy.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/bicara.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/mata.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/anak.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/tokyo.jpeg" class="img-fluid" alt="..." style="width: 9rem;">
+                    </div>
+                    <div class="carousel-item d-flex justify-content-evenly" style="height: 13.5rem;">
+                      <img src="asset/personal.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/almond.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/holmes.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/lokananta.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/mayit.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/komet.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                      <img src="asset/lancar.jpg" class="img-fluid" alt="..." style="width: 9rem;">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev btn btn-outline-dark" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next btn btn-outline-dark" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                </div>
+              </div>
+            </div>
+            <!-- Bagian akhir rekomendasi untukmu pada library section -->
+            <!-- Bagian awal best seller & film pada library section -->
+            <div class="container">
+              <div class="row">
+                <div class="col d-block w-30 p-1 color-bg2 text-dark font-me4">
+                  <h3><u>BEST SELLER & FILM</u></h3>
+                </div>
+              </div>
+            </div>
+            <div class="container" style="padding-top: 30px;">
+              <div class="row d-flex bd-highlight">
+                <div class="col padding-re">
+                  <div class="d-flex align-items-center">
+                    <div class="p-2 flex-fill bd-highlight">
+                      <img src="asset/dilan 1990.jpg" class="border border-2" alt="..." style="width: 12rem;">
+                    </div>
+                    <div class="flex-shrink-0 p-2 flex-fill bd-highlight d-flex justify-content-center">
+                      <video controls autoplay muted src="asset/Official Trailer Dilan 1990.mp4" width="400rem"></video>
+                    </div>
+                    <div class="flex-grow-1 ms-3 p-3 flex-fill bd-highlight d-block p-2,5 color-bg2 text-dark font-mef">
+                      <h5>Dilan: Dia adalah Dilanku Tahun 1990</h5>
+                      <h6 class="text-muted">Pidi Baiq</h6>
+                      <p><strong>Deskripsi Buku</strong> <br> "Dilan: Dia adalah Dilanku Tahun 1990" adalah novel karya Pidi Baiq yang mengisahkan kisah cinta antara Milea, seorang siswi SMA, dan Dilan, 
+                        seorang siswa SMA berandalan. Novel ini berhasil menggambarkan nuansa tahun 90-an dengan latar belakang kehidupan SMA dan lingkungan yang sangat mendetail. Meskipun awalnya Milea 
+                        tidak menyukai Dilan, mereka kemudian jatuh cinta dan menghadapi berbagai rintangan dalam hubungan mereka. Novel ini cocok untuk pembaca yang menyukai cerita cinta remaja yang manis dan penuh emosi.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row d-flex bd-highlight">
+                <div class="col padding-re">
+                  <div class="d-flex align-items-center">
+                    <div class="p-2 flex-fill bd-highlight" >
+                      <img src="asset/merindu cahaya de amstel.jpg" class="border border-2" alt="..." style="width: 12rem;">
+                    </div>
+                    <div class="flex-shrink-0 p-2 flex-fill bd-highlight d-flex justify-content-center">
+                      <video controls autoplay muted src="asset/OFFICIAL TRAILER _FILM MERINDU CAHAYA DE AMSTEL_.mp4" width="400rem"></video>
+                    </div>
+                    <div class="flex-grow-1 ms-3 p-3 flex-fill bd-highlight d-block p-2,5 color-bg2 text-dark font-mef">
+                      <h5>Merindu Cahaya De Amstel</h5>
+                      <h6 class="text-muted">Arumi Ekowati</h6>
+                      <p><strong>Deskripsi Buku</strong> <br> "Merindu Cahaya De Amstel" adalah novel karya Arumi Ekowati yang mengisahkan kisah cinta Nanda, seorang perempuan Indonesia, dan Jan, 
+                        pria Belanda. Mereka berhasil mengatasi perbedaan budaya dan bahasa namun menghadapi rintangan saat Nanda harus pindah ke Belanda setelah menikah. Di sana, Nanda mengalami 
+                        kesulitan beradaptasi dan mempertahankan hubungan cinta mereka. Cocok untuk pembaca yang menyukai cerita romantis dengan latar budaya yang berbeda.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row d-flex bd-highlight" style="padding-bottom: 20px;">
+                <div class="col padding-re">
+                  <div class="d-flex align-items-center">
+                    <div class="p-2 flex-fill bd-highlight">
+                      <img src="asset/dear nathan.jpg" class="border border-2" alt="..." style="width: 12rem;">
+                    </div>
+                    <div class="flex-shrink-0 p-2 flex-fill bd-highlight d-flex justify-content-center">
+                      <video controls autoplay muted src="asset/DEAR NATHAN OFFICIAL TRAILER.mp4" width="400rem"></video>
+                    </div>
+                    <div class="flex-grow-1 ms-3 p-3 flex-fill bd-highlight d-block p-2,5 color-bg2 text-dark font-mef">
+                      <h5>Dear Nathan</h5>
+                      <h6 class="text-muted">Erisca Febriani</h6>
+                      <p><strong>Deskripsi Buku</strong> <br> "Dear Nathan" adalah novel remaja karya Erisca Febriani yang mengisahkan kisah cinta segitiga antara dua sahabat, Salma dan Laras, siswa pindahan 
+                        tampan bernama Nathan. Cerita ini mengambil latar belakang SMA dan menghadirkan berbagai konflik emosional yang dialami tokoh-tokohnya. Novel ini berhasil menarik perhatian para 
+                        pembaca remaja dengan gaya penulisan yang sederhana, menghibur dan penuh emosi. Cocok untuk pembaca yang menyukai cerita cinta remaja dengan alur yang ringan dan mudah dipahami.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Bagian akhir best seller & film pada library section -->
+            </div>
+     </section>
+    <!-- Bagian akhir library section -->
+
+    <!-- Bagian awal contact us section -->
+    <section>
+      <div class="container-fluid padding-sec3 padding-re bg-dark text-light" id="contact">
+        <!-- Content here -->
+        <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h2>Contact Us</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-8">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nama Anda</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Email Anda</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Pesan Anda</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn color-bg2">Submit</button>
+            </form>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bagian akhir contact us section -->
+
+    <!-- Bagian awal footer -->
+    <footer>
+      <div class="container-fluid text-center bg-dark text-light p-2">
+        <!-- Content here -->
+        <p style="padding-top: 5px;">© 2023 | by Arindah Maharani Saputri</p>
+      </div>
+    </footer>
+    <!-- Bagian akhir footer -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
